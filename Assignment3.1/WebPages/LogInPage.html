@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .header {
+                background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 600px;
+                flex-wrap: wrap;
+            }
+            .box {
+                background-color:orange;
+                text-align: center;
+                width: 287px;
+                height: 400px;
+                position: absolute;
+                top:271px;
+            }
+            .logo {
+                position: absolute;
+                width: 315px;
+                left:610px;
+                top:60px;
+            }
+            .fname {
+                width: 150px;
+            }
+            button {
+                height:25px;
+                width:250px;
+            }
+            .forgotPassword {
+                position: relative;
+                right:60px;
+            }
+            .signUp {
+                position: relative;
+                bottom: 18.5px;
+                left: 60px;
+            }
+        </style>
+    </head>
+    <body class="header">
+        <img src="..\images\img4.png" class="logo" alt="Photo">
+        <fieldset class="box">
+            <p><br><br></p>
+            <h2 style="text-align:center">Please login to access login-protected services<br></h2>
+			<form method="post">
+				<label for="fname">Email:</label><br>
+				<input type="text" id="fname" name="fname"><br>
+				<label for="fname">Password:</label><br>
+				<input type="text" id="lname" name="lname"><br><br>
+                
+			</form>
+            <a href="DestinationPlaces.html">
+                <button>Login</button><br><br><br><br><br>
+            </a>
+            <div class="forgotPassword">
+                <a href = "LogInPage.html">Forgot Password?</a>
+            </div>
+            <div class="signUp">
+                <a href = "CreateAccount.html">Sign up</a>
+            </div>
+		</fieldset>
+    </body>
+</html>
