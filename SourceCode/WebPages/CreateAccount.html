@@ -46,6 +46,7 @@
                 font-family: Cambria, serif;
                 color:white;
                 text-align:center;
+                height:8.8%
             }
             .backgroundimage {
                 background-image: url('..\images\img1.jpg');
@@ -79,48 +80,59 @@
             .bottomPart {
                 text-align:center;
             }
+            textarea {
+                max-width: 500px;
+                min-width: 300px;
+                max-height: 50px;
+            }
         </style>
     </head>
     <body class="header">
         <img src="..\images\img1.jpg" class = "backgroundimage" alt="Photo">
         <fieldset class="box">
-            <h1 id ="signup">Sign Up</h1><br>
-			<form method="post" class="lname">
-                <div class="main"> 
-                    <label>UserID</label>
-                    <label><input type="text"><span>&emsp13;</span></label>
-                    <label>Password</label>
-                    <label><input type="password"><span></span></label><br><br>
-                </div>
-                <div class="level2">
-                    <label id="email">Email</label>
-                    <input type="text" id="emailbox"><span>&emsp13;&emsp13;&emsp13;&emsp13;</span>
-                    <label>Address</label>
-                    <input type="text"><span></span><br><br>
-                </div>
-                <div class="level3">
-                    <label id ="countryID">Country</label>
-                    <input type="text" id="countryinput"><span>&emsp13;&emsp13;</span>
-                    <label>Zipcode</label>
-                    <input type="text"><span></span><br><br>
-                </div>
-                <div class="checkboxes">
-                    <label for="fname">Gender</label><br>
-                    <label id = "male"><input type="radio" name="gender"><span>Male</span></label>
-                    <label id = "female"><input type="radio" name="gender"><span>Female</span></label>
-                    <label id = "unknown"><input type="radio" name="gender"><span>Don't want to share</span></label>
-                </div>
+            <h1 id ="signup">Sign Up</h1>
+			<form class="lname" action="LogInPage.html">
+                <label>UserID</label>
+                <input type="text" required><span>&emsp13;</span>
+                
+                <label>Password</label>
+                <input type="password" required><span></span><br><br>
+                
+                <label id="email">Email</label>
+                <input type="email" id="emailbox" required><span>&emsp13;&emsp13;&emsp13;&emsp13;</span>
+                
+                <label>Address</label>
+                <input type="text" required><span></span><br><br>
+                
+                <label for="cars" id ="countryID">Country</label>
+                <select name="cars" id="cars" required>
+                    <option value="">None</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Turkey">Turkey</option>
+                </select><span>&emsp13;&emsp13;</span>
+                
+                <label>Zipcode</label>
+                <input type="text" required><span></span><br><br>
+                
+                <label for="fname">Gender</label><br>
+                <label id = "male"><input type="radio" name="gender"><span>Male</span></label>
+                <label id = "female"><input type="radio" name="gender"><span>Female</span></label>
+                <label id = "unknown"><input type="radio" name="gender"><span>Don't want to share</span></label><br>
+                
                 <label for="fname"><br>Language</label><br>
-				<input type="text"><br><br>
+				<input type="text" required /><br><br>
+
                 <label for="fname">About/Bio</label><br>
-                <textarea rows="4" cols="50" maxlength="100"></textarea><br><br>
+                <textarea rows="4" cols="50" maxlength="100" required></textarea><br><br>
+
+                <button class="btn" type="submit">Create Account</button><br><br><br>
 			</form>
-            <div class="bottomPart">
-                <a href="LogInPage.html">
-                    <button class="btn">Create Account</button><br><br><br>
-                </a>
-                <a href="LogInPage.html">Log in</a>
-            </div>
+            <a href="LogInPage.html"><center>Log in</center></a>
 		</fieldset>
     </body>
 </html>
